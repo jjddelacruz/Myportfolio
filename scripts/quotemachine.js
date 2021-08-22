@@ -23,19 +23,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 ["You’ve got to bumble forward into the unknown", "Frank Gehry"]];
 
 // 2. dataset of color schemes
-  const colorsPool = [["#ECF5B7", "#9CB418", "#7D9014"],
-                    ["#B7E1CE", "#358260", "#1E4835"],
-                    ["#FFAB91", "#FF7043", "#E64A19"],
-                    ["#C3C8BC", "#919A84", "#5E6553"],
-                    ["#EF9A9A", "#F44336", "#D32F2F"],
-                    ["#E6EE9C", "#CDDC39", "#827717"],
-                    ["#90CAF9", "#2196F3", "#1565C0"],
-                    ["#CE93D8", "#AB47BC", "#6A1B9A"],
-                    ["#F8BBD0", "#F06292", "#E91E63"],
-                    ["#C5CAE9", "#7986CB", "#3F51B5"],
-                    ["#B0BEC5", "#78909C", "#546E7A"],
-                    ["#B2EBF2", "#26C6DA", "#0097A7"],
-                    ["#BCAAA4", "#795548", "#3E2723"]];
+  const colorsPool = [["#000", "#000", "#000"]];
 
 // VARIABLES
   let oldQuoteIndex;
@@ -80,7 +68,7 @@ document.addEventListener("DOMContentLoaded",function(){
       index = generateNumber(colorsPool);
     }
 
-    let colorShade = colorsPool[index];
+    //let colorShade = colorsPool[index];
     let twitterButton = document.querySelectorAll(".btn")[1];
     //let background = document.body;
     let text = document.querySelector(".container");

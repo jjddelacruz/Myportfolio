@@ -1,4 +1,4 @@
-body {
+/* body {
   font-size: 14px;
   background: #ECF5B7;
   font-family: sans-serif;
@@ -7,7 +7,7 @@ body {
   -webkit-transition: all .6s;
   -o-transition: all .6s;
   transition: all .6s;
-}
+} */
 
 .border {
   border: 6px solid #9CB418;
@@ -16,12 +16,12 @@ body {
   box-shadow: 4px 4px 0 3px #7D9014;
 }
 
-.border-smaller {
+/* .border-smaller {
   border: 4px solid #9CB418;
   -webkit-box-shadow: 3px 3px 0 2px #7D9014;
   -moz-box-shadow: 3px 3px 0 2px #7D9014;
   box-shadow: 3px 3px 0 2px #7D9014;
-}
+} */
 
 /*.border-smaller:active {
   box-shadow: none;
@@ -44,7 +44,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: #7D9014;
+  color: #000;
   } 
 
 header {
@@ -88,17 +88,21 @@ header {
   float: left;
 }
 
-.btn {
+.buttons-area .btn:hover{
+    border-color: red;
+}
+
+/* .btn {
   float: left;
   background-color: #ECF5B7;
   border-radius: 1px;
   font-size: 20px;
   margin-right: 8px;
-}
+} */
 
-.btn:first-of-type {
+/* .btn:first-of-type {
   margin-right: 24px;
-}
+} */
 
 #random-quote {
   padding: 12px 24px;
@@ -158,10 +162,10 @@ footer p a {
   }
   
 
-  .buttons-area {
+  /* .buttons-area {
     margin-bottom: 20px;
     float: none;
-  }
+  } */
   
   #tweet-quote {
   padding: 6px 16px;
