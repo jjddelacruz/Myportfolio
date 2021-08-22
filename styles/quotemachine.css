@@ -88,7 +88,7 @@ body {
     float: left;
   }
   
-  .btn {
+  #random-quote{
     float: left;
     background-color: #ECF5B7;
     border-radius: 1px;
@@ -96,7 +96,7 @@ body {
     margin-right: 8px;
   }
   
-  .btn:first-of-type {
+  #random-quote:first-of-type {
     margin-right: 24px;
   }
   #random-quote {
