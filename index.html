@@ -4,15 +4,23 @@
 <head>
   <!--  Meta  -->
   <meta charset="UTF-8" />
-   <!-- Menu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portpolio Page</title>
+  <!--  Styles  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/documentation.css">
+
+</head>
+<body>
+  <header>
+     <!-- Menu -->
    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-bar">
     <a class="navbar-brand" id="header" href="index.html">Joshua's Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">      
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="tribute.html">Tribute Page<span class="sr-only">(current)</span></a>
@@ -31,7 +39,6 @@
           <a class="nav-link" href="quotemachine.html">Quote Machine</a>
         </li>
       </ul>
-
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -39,21 +46,102 @@
     </div>
   </nav>
   <!-- End of Menu-->
+  </header>
 
-  <title>My Portpolio Page</title>
-  <!--  Styles  -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/documentation.css">
-</head>
 
-<body>
-  <h1>Welcome to My page</h1>
-  profile under FreeCodeCamp: <a href="#">Free code camp</a>
-  LinkedIn Profile:   <a href="#">Linkedin</a>
+<!-- Introduction -->
+
+<section class="intro" id="home">
+  <h1 class="section__title section__title--intro"> 
+      Hi I'am <strong> Joshua James Dela Cruz</strong>
+  </h1>
+      <p class="section__subtitle section__subtitle--intro">front-end Dev</p>
+      <img src="" alt=""> 
+</section>
+
+  <!-- My services -->
+  <section class="my-services" id="services">
+      <h2 class="section__title section-title-services">What I do</h2>
+     <div class="services">
+       <div class="service">
+         <h3>Design + Development</h3>
+           <p>
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+             Amet impedit ut omnis deserunt illum itaque sint. Culpa, sunt. 
+             Accusantium odio sunt enim officiis sapiente molestiae! 
+             Culpa impedit atque omnis facere.
+            </p>
+       </div>
+       <div class="service">
+         <h3>E-commerce</h3>
+         <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Amet impedit ut omnis deserunt illum itaque sint. Culpa, sunt. 
+          Accusantium odio sunt enim officiis sapiente molestiae! 
+          Culpa impedit atque omnis facere.
+         </p>
+       </div>
+       <div class="service">
+         <h3>WordPress</h3>
+         <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Amet impedit ut omnis deserunt illum itaque sint. Culpa, sunt. 
+          Accusantium odio sunt enim officiis sapiente molestiae! 
+          Culpa impedit atque omnis facere.
+         </p>
+       </div>
+     </div>
+
+     <a href="#" class="btn">My Work</a>
+  </section>
+
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about"></p>
+    <div class="about-me__body">
+      <p></p>
+      <p></p>
+    </div>
+    <img src="" alt="picture">
+  </section>
+
+  <!-- My Work -->
+  <section class="my-work" id="work">
+    <h2 class="section__title section__title--my-work">My Work</h2>
+    <p class="section__subtitle section__subtitle--my-work"></p>
+
+    <div class="portfolio">
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </div>
+  </section>
+<!-- Footer -->
+<footer>
+
+    <a href="mailto:joshuajamesddelacruz@yahoo.com.ph" class="footer-link">hello@joshua</a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="" class="social-list__link">a</a>
+      </li>
+      <li class="social-list__item">
+        <a href="" class="social-list__link">b</a>
+      </li>
+      <li class="social-list__item">
+        <a href="" class="social-list__link">c</a>
+      </li>
+      <li class="social-list__item">
+        <a href="" class="social-list__link">cd</a>
+      </li>
+    </ul>
+</footer>
+<!-- Footer -->
+
 
 </body>
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- end jquery -->
 </html>
