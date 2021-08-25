@@ -16,6 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
+    --clr-tone: #FFDAC1;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -277,17 +278,22 @@ nav { display: none; }
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+ul li{
+    display: inline;
+    list-style-type: square;
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: var(--clr-tone);
     overflow: hidden;
 }
 
 .portfolio__img {
     transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        transform 1000ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
 }
 
