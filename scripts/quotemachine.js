@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded",function(){
 // DATA
 // 1. dataset of quotes and their authors
   const quotesPool = [
-                ["test", "test"],
-                ["test1", "test1"],
-                ["test2", "test2"],
-                ["test3", "test3"],
+                [`It's more satisfying to hear a single "thank you" than a lot of "sorry"s.`, `Emilya <br> (Re:Zero)`,`https://www.less-real.com/imagevault/uploaded/imagessolidthumbnails/part7/Emilia-33082.jpg`],
+                [`Not knowing what the real problem is before trying it is what makes the problem hard.`, `Viktor Licht <br> (Fire Force)`,`https://www.less-real.com/imagevault/uploaded/imagessolidthumbnails/part7/Viktor-Licht-33083.jpg`],
+                [`If you really want to change someone, you have to start with yourself.`, `Hanabi Yasuraoka <br> (Kuzu no Honkai)`,`https://www.less-real.com/imagevault/uploaded/imagessolidthumbnails/part7/Rei-Hououmaru-33080.jpg`]
                 ];
 
 
@@ -34,9 +33,13 @@ document.addEventListener("DOMContentLoaded",function(){
     let newQuote = quotesPool[index];
     let quote = document.getElementById("quote");
     let author = document.getElementById("author");
+    let image = document.getElementById("image");
+
 //Show new quote and author on page
     quote.innerHTML = newQuote[0];
     author.innerHTML = newQuote[1];
+    image.src = newQuote[2];
+
 //Update Tweet href attribute with new quote and author
     let tweet = document.getElementById("tweet-quote");
     tweet.href = 'https://twitter.com/intent/tweet?hashtags=quotes&text="' + newQuote[0] + '" -' + newQuote[1];
@@ -47,16 +50,13 @@ document.addEventListener("DOMContentLoaded",function(){
 //Show new quote and change color scheme on 'Random Quote' button click
   function onQuoteButtonClick() {
     let randomQuoteButton = document.querySelector("#random-quote");
-    randomQuoteButton.addEventListener("click", function(){
-      generateNewQuote();
-     
-    });
+    randomQuoteButton.addEventListener("click", function(){   generateNewQuote();   });
   }
 
   onQuoteButtonClick();
+  
 // Get the first quote and color scheme on window load
-  window.onload = function () {
-    generateNewQuote();
-  };
+  window.onload = function () {  generateNewQuote();  };
+  
   
 });
