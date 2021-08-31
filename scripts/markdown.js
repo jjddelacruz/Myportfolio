@@ -1,5 +1,5 @@
-function App(){
-    return <div>hello world</div>;
+function App() {
+    return <div>Hello World</div>;
 }
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
