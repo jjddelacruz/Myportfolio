@@ -8,11 +8,13 @@ body{
 }
 
 .textarea{
-    width:100%;
+    width:50%;
     font-size: 22px;
     padding: 20px;
     border-radius: 0px 20px;
     outline: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .textarea:focus{
@@ -27,6 +29,9 @@ body{
     border: 1px solid black;
     box-shadow:  1px 1px 5px 1px gray;
     border-radius: 20px 0px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
 }
 
 #preview code{
