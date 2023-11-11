@@ -1,0 +1,120 @@
+<div
+	id="standard_task_description"
+	class="TaskDescription__StandardTaskDescription-sc-7m9k5q-3 crhSKM protected standard-task-description"
+>
+	<h2 class="mod-hidden">Task description</h2>
+	<div
+		class="TaskDescription__TaskContentWrapper-sc-7m9k5q-2 kDUwpJ task-description-content"
+	>
+		<p>Your task is to implement a newsletter system using observer pattern.</p>
+		<h3>Requirements</h3>
+		<p>Implement three classes:</p>
+		<ol>
+			<li>
+				<p>
+					Subscriber class, with three properties: <code>name</code>,
+					<code>emailAddress</code> and <code>age</code>.
+				</p>
+			</li>
+			<li>
+				<p>
+					Message class, with two properties: <code>content</code> and optional
+					<code>minimumAge</code>
+				</p>
+			</li>
+			<li>
+				<p>
+					NewsletterSystem class: it should handle the newsletter system using
+					observer pattern.
+				</p>
+				<p>
+					It should be initialized with one parameter: the
+					<code>sendEmail</code> function (which is already implemented)
+				</p>
+			</li>
+		</ol>
+		<p>
+			The <code>sendEmail</code> function accepts two arguments,
+			<code>emailAddress</code> and <code>messageContent</code>, and never
+			fails.
+		</p>
+		<p>It should implement three methods:</p>
+		<ol>
+			<li>
+				<code>sendNewsletter</code>: this should receive an instance of the
+				Message class as its only argument and should call
+				<code>sendEmail</code> for every subscriber, where notifications should
+				be based on age.
+			</li>
+			<li>
+				<code>subscribe</code>: this should receive an instance of the
+				Subscriber class as its only argument. Its effect should be to notify
+				that subscriber about messages in the future.
+			</li>
+			<li>
+				<code>unsubscribe</code>: this should receive an instance of the
+				Subscriber class. Its effect should be to allow that subscriber to opt
+				out of receiving future messages.
+			</li>
+		</ol>
+		<h4>Additional requirements</h4>
+		<ul>
+			<li>
+				Only subscribers whose age is greater than or equal to 13 should be able
+				to subscribe to the newsletter system.
+			</li>
+			<li>
+				If a subscriber has already subscribed, and tries to do so again,
+				nothing should happen (no deep comparison is needed; subscribers should
+				only be compared by reference).
+			</li>
+			<li>
+				When a Message has a <code>minimumAge</code> specified, only subscribers
+				whose age matches at least that value should be notified.
+			</li>
+			<li>
+				When using <code>sendEmail</code>, every message should be personalized
+				in the following format:
+				<code>Hello "Subscriber.name" "Message.content"</code>.
+			</li>
+		</ul>
+		<h3>Available tools/packages</h3>
+		<p>You can use:</p>
+		<ul>
+			<li>JavaScript <em>Node 14 / ES2020</em></li>
+		</ul>
+		<h3>Examples</h3>
+		<pre><code class="language-js">const john = new Subscriber("John", "john@example.com", 21)
+const luke = new Subscriber("Luke", "luke@example.com", 16)
+const leia = new Subscriber("Leia", "leia@example.com", 16)
+const eric = new Subscriber("Eric", "eric@example.com", 12)
+
+const invitation = new Message("Come and join our conference")
+const loanAd = new Message("We have the best loans", 21)
+
+const system = new NewsletterSystem(sendEmail)
+
+system.subscribe(john)
+system.sendNewsletter(invitation)
+// John received email with content "Hello John Come and join our conference"
+system.subscribe(luke)
+system.subscribe(leia)
+system.sendNewsletter(invitation)
+// John, Luke and Leia received personalized emails
+system.subscribe(eric)
+system.sendNewsletter(invitation)
+// John, Luke and Leia received personalized emails, Eric is too young for newsletters
+system.sendNewsletter(loanAd)
+// Only John received the email, he is the only subscriber 21+ years old
+system.unsubscribe(leia)
+system.sendNewsletter(invitation)
+// John and Luke received personalized emails
+</code></pre>
+	</div>
+</div>
+
+<h1>This is my answer</h1>
+
+<script></script>
+
+<b></b>
