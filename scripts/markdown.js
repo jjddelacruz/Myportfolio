@@ -1,41 +1,38 @@
 marked.setOptions({
-    breaks: true,
-  });
+	breaks: true,
+});
 
 const renderer = new marked.Renderer();
 
 function App() {
+	const [text, setText] = React.useState(placeholder);
+	return (
+		<div className="text-center">
+			<h1 className="p-4">My mark down previewer</h1>
+			<textarea
+				name="text"
+				id="editor"
+				rows="10"
+				value={text}
+				onChange={(e) => setText(e.target.value)}
+				className="textarea"
+			></textarea>
+			<h3 className="mt-3">Output</h3>
+			<Preview markdown={text} className="col" />
+		</div>
+	);
 
-const [text, setText] = React.useState(placeholder);
-    return (
-    <div className='text-center'> 
-                  <h1 className='p-4'>My mark down previewer</h1>
-                  <textarea
-                  name='text'
-                  id='editor'
-                  rows='10'
-                  value={text}
-                  onChange={ (e) => setText(e.target.value) }
-                  className='textarea'
-                  >
-                  </textarea>
-                  <h3 className='mt-3'>Output</h3>
-                  <Preview markdown={text} className='col'/>
-    </div>
-          );
-
-    function Preview({markdown}){
-        return (
-            <div
-             dangerouslySetInnerHTML={{
-                 __html: marked(markdown, {rendere: renderer} ),
-             }}
-             id='preview'
-            />   
-        )
-    }
+	function Preview({ markdown }) {
+		return (
+			<div
+				dangerouslySetInnerHTML={{
+					__html: marked(markdown, { rendere: renderer }),
+				}}
+				id="preview"
+			/>
+		);
+	}
 }
-
 
 const placeholder = `# Welcome to my React Markdown Previewer!
 
@@ -79,6 +76,6 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-`;
-ReactDOM.render(<App />, document.getElementById('root'));
+[freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`;
+
+ReactDOM.render(<App />, document.getElementById("root"));
